@@ -315,19 +315,22 @@ reboot_os() {
     fi
 }
 
-download_files() {
-        # if ! wget --no-check-certificate -O ${libsodium_file}.tar.gz ${libsodium_url}
-        # then
-        #         echo -e "[${red}错误${plain}] 下载${libsodium_file}.tar.gz失败!"
-        #         exit 1
-        # fi
-        # if ! wget --no-check-certificate -O shadowsocks-master.zip https://github.com/shadowsocks/shadowsocks/archive/master.zip
-        # then
-        #         echo -e "[${red}错误${plain}] shadowsocks安装包文件下载失败！"
-        #         exit 1
-        # fi
+download_files_bak() {
+	if ! wget --no-check-certificate -O ${libsodium_file}.tar.gz ${libsodium_url}
+	then
+	        echo -e "[${red}错误${plain}] 下载${libsodium_file}.tar.gz失败!"
+	        exit 1
+	fi
+	if ! wget --no-check-certificate -O shadowsocks-master.zip https://github.com/shadowsocks/shadowsocks/archive/master.zip
+	then
+	        echo -e "[${red}错误${plain}] shadowsocks安装包文件下载失败！"
+	        exit 1
+	fi
 }
 
+download_files() {
+	date
+}
 generate_config() {
     cat > /etc/shadowsocks.json<<-EOF
 {
