@@ -1,3 +1,3 @@
 # ss-auto
-# from flyzy2005
+# from 5002yzylf
 shadowsocket
