@@ -1,0 +1,2 @@
+# ss-auto
+shadowsocket
